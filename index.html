@@ -1,12 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css\styles.css">
+    <link rel="stylesheet" href="css\styles.css"> <!--menghubungkan file css dengan html-->
 </head>
+
+
 <body>
-    
+    <!-- Judul/ Navbar -->
+    <header class="main-header">
+        <h1>Kalkulator BMI</h1>
+    </header>
+
+    <!-- Isi Konten -->
+    <main>
+        <!-- Konten Sebelah Kiri -->
+        <section>
+            <!-- Penjelasan BMI -->
+            <article>
+                <p>Kalkulator BMI adalah...</p>
+            </article>
+
+            <!-- Form input -->
+            <form>
+                <div class="form-group">
+                    <label for="in-berat-badan">Berat Badan (kg):</label>
+                    <input type="number" id="in-berat-badan">
+                </div>
+
+                <div class="form-group">
+                    <label for="in-usia">Usia (Tahun):</label>
+                    <input type="number" id="in-usia">
+                </div>
+
+                <div class="form-group">
+                    <label for="in-tinggi-badan">Tinggi Badan (cm):</label>
+                    <input type="number" id="in-usia">
+                </div>
+
+                <div>
+                    <button class="bg-hitung" type="submit">Hitung BMI</button>
+                    <button class="bg-reset" type="submit">Reset</button>
+                </div>
+            </form>
+
+            <!-- Fitur unggulan -->
+            <header>
+                <h3 class="fit-unggulan">Fitur Unggulan</h3>
+            </header>
+            <p class="unggulan">
+                Pada kalkulator BMI ini dilengkapi dengan...
+            </p>
+        </section>
+
+        <!-- Konten Sebelah Kanan -->
+        <section>
+            <section class="result-section">
+                 <!-- Hasil Perhitungan & Penjelasan -->
+            <header>
+                <h3>Hasil Perhitungan</h3>
+            </header>
+            </section>
+
+            <div class="result-section">
+                <span id="hasil-bmi">0</span>
+            </div>
+
+            <article>
+                Dari hasil perhitungan menunjukkan...
+            </article>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <span>Mini Project from RevoU @2025 | by Vania</span>
+    </footer>
 </body>
+
 </html>
+
+<!-- (di menit 56:53) 250125 -->
