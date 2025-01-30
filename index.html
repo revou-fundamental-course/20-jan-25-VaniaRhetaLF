@@ -44,7 +44,8 @@
                         <input type="radio" id="input-jenis-kelamin" name="jenis-kelamin" value="pria" required> Pria
                     </label>
                     <label>
-                        <input type="radio" id="input-jenis-kelamin" name="jenis-kelamin" value="wanita" required> Wanita
+                        <input type="radio" id="input-jenis-kelamin" name="jenis-kelamin" value="wanita" required>
+                        Wanita
                     </label>
                 </div>
 
@@ -60,7 +61,8 @@
 
                 <div class="form-group">
                     <label for="in-tinggi-badan"><b>Tinggi Badan (cm):</b></label>
-                    <input type="number" id="in-tinggi-badan" name="in-tinggi-badan" placeholder="Tinggi Badan dalam cm">
+                    <input type="number" id="in-tinggi-badan" name="in-tinggi-badan"
+                        placeholder="Tinggi Badan dalam cm">
                 </div>
 
                 <div class="button-position">
@@ -86,15 +88,15 @@
                         <th>Status Berat Badan</th>
                     </tr>
                     <tr class="tr-ganjil">
-                        <td>Kurang Dari 18,5</td>
+                        <td>Kurang Dari 18.5</td>
                         <td>Kekurangan Berat Badan</td>
                     </tr>
                     <tr class="tr-genap">
-                        <td>18,5 - 24.9</td>
+                        <td>18.5 s.d 24.9</td>
                         <td>Normal (Ideal)</td>
                     </tr>
                     <tr class="tr-ganjil">
-                        <td>25,0 - 29,9</td>
+                        <td>25.0 s.d 29.9</td>
                         <td>Kelebihan Berat Badan</td>
                     </tr>
                     <tr class="tr-genap">
@@ -115,15 +117,132 @@
             </section>
 
             <div class="result-section">
-                <span id="hasil-bmi" type="number">0</spSan>
+                <span id="hasil-bmi" type="number">0</span>
+                <br />
+                <span id="kategori" type="text">Masukan Data Terlebih Dahulu</span>
             </div>
 
             <article id="keterangan-hasil-bmi">
                 <p>Ayo coba periksa apakah berat badanmu sudah ideal atau belum. Selain itu kamu
-                   akan diberikan beberapa saran agar bisa mencapat berat abdan yang ideal. Jadi
-                   <b>Ayo coba sekarang</b> dengan mengisi form yang berada di samping kiri.
+                    akan diberikan beberapa saran agar bisa mencapat berat badan yang ideal. Jadi
+                    <b>Ayo coba sekarang</b> dengan mengisi form yang berada di samping kiri.
                 </p>
             </article>
+            <article>
+                <p>Lalu dibawah ini terdapat Tabel yang dilengkapi dengan saran dari segi Pola Makan
+                    atau Pola Hidup. Silahkan untuk dicermati, semoga membantu ;D
+                </p>
+            </article>
+
+            <!-- Tabel saran untuk masing-masing kategori BMI -->
+            <div>
+                <table class="saran-kategori">
+                    <tr>
+                        <th>Kategori</th>
+                        <th>Saran yang Dapat Diikuti</th>
+                    </tr>
+                    <tr class="tr-ganjil">
+                        <td>Kurus</td>
+                        <td>
+                            <p>
+                            <ul>
+                                <li>Pola Makan</li>
+                            </ul>
+                            <ol>
+                                <li>Pilih makanan padat nutrisi seperti kacang-kacangan, biji-bijian,
+                                    dan produk susu.</li>
+                                <li>Makan lebih sering dengan porsi kecil, misalnya 5-6 kali sehari.</li>
+                                <li>Pastikan setiap makan mengandung sumber protein (daging tanpa lemak,
+                                    ikan, telur) dan karbohidrat kompleks (nasi merah, roti gandum).</li>
+                            </ol>
+                            <ul>
+                                <li>Pola Hidup</li>
+                            </ul>
+                            <ol>
+                                <li>Lakukan latihan beban untuk membangun massa otot.</li>
+                                <li>Tidur 7-9 jam per malam untuk mendukung pertumbuhan otot dan pemulihan
+                                    tubuh.</li>
+                            </ol>
+                            </p>
+                        </td>
+                    </tr>
+                    <tr class="tr-genap">
+                        <td>Ideal</td>
+                        <td>
+                            <p>
+                            <ul>
+                                <li>Pola Makan</li>
+                            </ul>
+                            <ol>
+                                <li>Konsumsi berbagai jenis makanan seperti karbohidrat, protein, lemak
+                                    sehat, vitamin, dan mineral.</li>
+                                <li>Makan dengan porsi yang sesuai untuk menghindari kelebihan kalori.</li>
+                                <li>Batasi asupan makanan tinggi gula dan lemak trans.</li>
+                            </ol>
+                            <ul>
+                                <li>Pola Hidup</li>
+                            </ul>
+                            <ol>
+                                <li>Lakukan olahraga aerobik minimal 150 menit per minggu, seperti berjalan
+                                    kaki atau bersepeda.</li>
+                                <li>Minum air putih yang cukup, sekitar 8 gelas per hari.</li>
+                            </ol>
+                            </p>
+                        </td>
+                    </tr>
+                    <tr class="tr-ganjil">
+                        <td>Mendekati Obesitas</td>
+                        <td>
+                            <p>
+                            <ul>
+                                <li>Pola Makan</li>
+                            </ul>
+                            <ol>
+                                <li>Kurangi asupan kalori harian sekitar 500 kalori agar berat badan 0.5 kg
+                                    per minggu.</li>
+                                <li>Makan dalam porsi kecil namun lebih sering untuk mengontrol rasa lapar.</li>
+                                <li>Fokus pada sayuran, buah-buahan, dan protein tanpa lemak.</li>
+                            </ol>
+                            <ul>
+                                <li>Pola Hidup</li>
+                            </ul>
+                            <ol>
+                                <li>Kombinasikan latihan kardio dan kekuatan setidaknya 3-5 kali seminggu.</li>
+                                <li>Catat makanan yang dikonsumsi untuk mengidentifikasi pola makan dan area yang
+                                    perlu diperbaiki.</li>
+                            </ol>
+                            </p>
+                        </td>
+                    </tr>
+                    <tr class="tr-genap">
+                        <td>Obesitas</td>
+                        <td>
+                            <p>
+                            <ul>
+                                <li>Pola Makan</li>
+                            </ul>
+                            <ol>
+                                <li>Bekerja sama dengan ahli gizi untuk merancang rencana makan
+                                    yang sesuai.</li>
+                                <li>Hindari minuman manis, makanan cepat saji, dan camilan tidak
+                                    sehat.</li>
+                                <li>Tingkatkan asupan serat dari sayuran, buah, dan biji-bijian
+                                    untuk meningkatkan rasa kenyang.</li>
+                            </ol>
+                            <ul>
+                                <li>Pola Hidup</li>
+                            </ul>
+                            <ol>
+                                <li>Mulailah dengan aktivitas ringan seperti berjalan kaki,
+                                    kemudian tingkatkan intensitasnya seiring waktu.</li>
+                                <li>Bergabung dengan kelompok pendukung atau program penurunan
+                                    berat badan untuk motivasi.</li>
+                            </ol>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
         </section>
     </main>
 
@@ -132,8 +251,8 @@
         <span>Mini Project from RevoU @2025 | by Vania</span>
     </footer>
 
-     <!-- Menghubungkan file javascript dengan html -->
-     <script src="js\script.js"></script>
+    <!-- Menghubungkan file javascript dengan html -->
+    <script src="js\script.js"></script>
 </body>
 
 </html>

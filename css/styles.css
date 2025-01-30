@@ -12,7 +12,7 @@
 /* Pengaturan posisi isi konten */
 main {
     display: flex;
-    gap: 32px;
+    gap: 50px;
     padding: 50px;
     place-content: center;
 }
@@ -79,6 +79,7 @@ td {
     padding-right: 12px;
     padding-top: 8px;
     padding-bottom: 8px;
+    text-align: justify;
 }
 
 /* Pengaturan warna baris di tabel */
@@ -86,9 +87,11 @@ th {
     background-color: teal;
     color: white;
 }
+
 .tr-ganjil {
     background-color: floralwhite;
 }
+
 .tr-genap {
     background-color: lavenderblush;
 }
@@ -112,9 +115,27 @@ table {
 }
 
 /* Pengaturan posisi konten bagian kanan (Hasil) */
-#hasil-bmi {                    /* jika dari "id" menggunakan simbol # sebelum nama id nya */
+#hasil-bmi {
+    /* jika dari "id" menggunakan simbol # sebelum nama id nya */
     font-size: xxx-large;
-    font-family: math;
+    font-family: system-ui;
+}
+
+/* Pengaturaan posisi kategori BMI */
+#kategori {
+    display: flex;
+    justify-content: center;
+    font-size: x-large;
+    font-weight: bold;
+    background-color: gold;
+    padding-left: 18px;
+    padding-right: 18px;
+    border-radius: 5px;
+    /* text-align: center; */
+}
+
+.saran-kategori {
+    font-size: small;
 }
 
 /* Pengaturan posisi footer */
