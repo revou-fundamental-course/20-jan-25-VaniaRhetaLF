@@ -8,9 +8,6 @@
 
     <!--Menghubungkan file css dengan html-->
     <link rel="stylesheet" href="css\styles.css">
-
-    <!-- Menghubungkan file javascript dengan html -->
-    <script src="js\script.js"></script>
 </head>
 
 
@@ -26,39 +23,49 @@
         <section class="konten">
 
             <!-- Penjelasan BMI -->
-            <section class="konten">
+            <section>
                 <article>
                     <p>BMI <i>(Body Mass Index)</i> atau Indeks Massa Tubuh sebagai acuan untuk mengetahui apakah
-                       seseorang memiliki kondisi yang ideal dengan melihatnya dari berat badan dan tinggi badannya.
-                       Cara menghitungnya adalah membagi berat badan (dalam kg) dengan tinggi badan (dalam cm yang
-                       sudah di konversi ke meter) yang sudah di kuadratkan. <b>Kalkulator BMI</b> ini dapat membantu
-                       melakukan perhitungan atau kalkulasi untuk mengetahui apakah berat badan yang dimiliki ideal
-                       dengan tinggi badan.</p>
-                    <p>Namun kalkulator BMI ini <u>hanya sebagai alat bantu</u>. Hal terpenting adalh tetap menjaga 
-                       pola makan yang sehat dan rutin melakukan olahraga :).</p>
+                        seseorang memiliki kondisi yang ideal dengan melihatnya dari berat badan dan tinggi badannya.
+                        Cara menghitungnya adalah membagi berat badan (dalam kg) dengan tinggi badan (dalam cm yang
+                        sudah di konversi ke meter) yang sudah di kuadratkan. <b>Kalkulator BMI</b> ini dapat membantu
+                        melakukan perhitungan atau kalkulasi untuk mengetahui apakah berat badan yang dimiliki ideal
+                        dengan tinggi badan.</p>
+                    <p>Namun kalkulator BMI ini <u>hanya sebagai alat bantu</u>. Hal terpenting adalh tetap menjaga
+                        pola makan yang sehat dan rutin melakukan olahraga :).</p>
                 </article>
             </section>
 
             <!-- Form input -->
             <form>
                 <div class="form-group">
-                    <label for="in-berat-badan">Berat Badan (kg):</label>
-                    <input type="number" id="in-berat-badan" name="in-berat-badan" placeholder="dalam kg">
+                    <label for="in-jenis-kelamin"><b>Jenis Kelamin:</b></label>
+                    <label>
+                        <input type="radio" id="in-pria" name="pria" value="pria" required> Pria
+                    </label>
+                    <label>
+                        <input type="radio" id="in-wanita" name="wanita" value="wanita" required> Wanita
+                    </label>
                 </div>
 
                 <div class="form-group">
-                    <label for="in-usia">Usia (Tahun):</label>
+                    <label for="in-berat-badan"><b>Berat Badan (kg):</b></label>
+                    <input type="number" id="in-berat-badan" name="in-berat-badan" placeholder="Berat Badan dalam kg">
+                </div>
+
+                <div class="form-group">
+                    <label for="in-usia"><b>Usia (Tahun):</b></label>
                     <input type="number" id="in-usia" name="in-usia">
                 </div>
 
                 <div class="form-group">
-                    <label for="in-tinggi-badan">Tinggi Badan (cm):</label>
-                    <input type="number" id="in-tinggi-badan" name="in-tinggi-badan" placeholder="dalam cm">
+                    <label for="in-tinggi-badan"><b>Tinggi Badan (cm):</b></label>
+                    <input type="number" id="in-tinggi-badan" name="in-tinggi-badan" placeholder="Tinggi Badan dalam cm">
                 </div>
 
                 <div class="button-position">
-                    <button class="bg-hitung" type="submit" onclick="kalkulasi()">Hitung BMI</button>
-                    <button class="bg-reset" type="submit" onclick="kalkulasi()">Reset</button>
+                    <button class="bg-hitung" type="button" onclick="kalkulasi()">Hitung BMI</button>
+                    <button class="bg-reset" type="button" onclick="kalkulasi()">Reset</button>
                 </div>
             </form>
 
@@ -66,6 +73,7 @@
             <header>
                 <h3 class="fit-unggulan">Interpretasi dari Kalkulasi BMI</h3>
             </header>
+
             <p class="unggulan">
                 Terdapat empat kategori yang membedakan status berat badan pada Indeks Massa Tubuh, yaitu:
             </p>
@@ -87,9 +95,9 @@
                     </tr>
                     <tr class="tr-ganjil">
                         <td>25,0 - 29,9</td>
-                        <td>Kelebihan Berat Badan</td>                    
+                        <td>Kelebihan Berat Badan</td>
                     </tr>
-                    <tr class="tr-genap">                        
+                    <tr class="tr-genap">
                         <td>30.0 atau lebih</td>
                         <td>Kegemukan (Obesitas)</td>
                     </tr>
@@ -107,41 +115,25 @@
             </section>
 
             <div class="result-section">
-                <span id="hasil-bmi">0</span>
+                <span id="hasil-bmi">0</spSan>
             </div>
 
-            <article>
-                Dari hasil perhitungan menunjukkan...
+            <article id="keterangan-hasil-bmi">
+                <p>Ayo coba periksa apakah berat badanmu sudah ideal atau belum. Selain itu kamu
+                   akan diberikan beberapa saran agar bisa mencapat berat abdan yang ideal. Jadi
+                   <b>Ayo coba sekarang</b> dengan mengisi form yang berada di samping kiri.
+                </p>
             </article>
         </section>
     </main>
-
-    <!-- Fuction Javascript -->
-
-    <!-- Kalkulasi hasil perhitungan berat badan/tinggi badan -->
-    <script>
-        function kalkulasi() {
-            let beratBadan = document.getElementById("in-berat-badan").value;
-            let usia = document.getElementById("in-usia").value;
-            let tinggiBadan = document.getElementById("in-tinggi-badan").value;
-
-            let hasil = beratBadan / ((tinggiBadan / 100) ^ 2);
-
-            document.write('Hasilnya adalah' + hasil)
-
-            // console.log('${beratBadan} ${usia} $(tinggiBadan)')
-
-            // alert("Sudah di klik")
-            // console.log("Ini sudah di klik");
-        }
-    </script>
 
     <!-- Footer -->
     <footer>
         <span>Mini Project from RevoU @2025 | by Vania</span>
     </footer>
+
+     <!-- Menghubungkan file javascript dengan html -->
+     <script src="js\script.js"></script>
 </body>
 
 </html>
-
-<!-- (di menit 56:53) 250125 -->

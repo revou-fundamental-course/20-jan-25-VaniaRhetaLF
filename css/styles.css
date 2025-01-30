@@ -83,7 +83,8 @@ td {
 
 /* Pengaturan warna baris di tabel */
 th {
-    background-color: aquamarine;
+    background-color: teal;
+    color: white;
 }
 .tr-ganjil {
     background-color: floralwhite;
@@ -100,7 +101,7 @@ table {
 
 /* Pengaturan lebar isi konten */
 .konten {
-    width: 500px;
+    max-width: 500px;
 }
 
 /* Pengaturan posisi judul dan nominal hasil perhitungan */
@@ -122,6 +123,9 @@ footer {
 }
 
 /* Responsif website */
-/* @media only screen and (max-width: 600px) {
-
-} */
+@media only screen and (max-width: 400px) {
+    main {
+        /* display: flex; */
+        flex-direction: column;
+    }
+}
