@@ -5,12 +5,21 @@
     text-align: center;
 }
 
+.font {
+    font-family: system-ui;
+}
+
 /* Pengaturan posisi isi konten */
 main {
     display: flex;
     gap: 32px;
     padding: 50px;
     place-content: center;
+}
+
+/* Pengaturan align paragraf */
+p {
+    text-align: justify;
 }
 
 /* Pengaturan posisi field input */
@@ -37,8 +46,15 @@ form {
 button {
     border: none;
     padding: 8px;
+    border-radius: 4px;
 }
 
+.button-position {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Pengaturan warna button */
 .bg-hitung {
     background-color: lightskyblue;
 }
@@ -55,6 +71,36 @@ button {
 
 .unggulan {
     margin-top: 8px;
+}
+
+/* Pengaturan posisi tabel Integrasi BMI */
+td {
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+/* Pengaturan warna baris di tabel */
+th {
+    background-color: aquamarine;
+}
+.tr-ganjil {
+    background-color: floralwhite;
+}
+.tr-genap {
+    background-color: lavenderblush;
+}
+
+/* Pengaturan tabel interpretasi BMI */
+table {
+    display: flex;
+    justify-content: center;
+}
+
+/* Pengaturan lebar isi konten */
+.konten {
+    width: 500px;
 }
 
 /* Pengaturan posisi judul dan nominal hasil perhitungan */
@@ -74,3 +120,8 @@ button {
 footer {
     text-align: center;
 }
+
+/* Responsif website */
+/* @media only screen and (max-width: 600px) {
+
+} */

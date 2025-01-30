@@ -4,12 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css\styles.css"> <!--menghubungkan file css dengan html-->
+    <title>Kalkulator BMI</title>
+
+    <!--Menghubungkan file css dengan html-->
+    <link rel="stylesheet" href="css\styles.css">
+
+    <!-- Menghubungkan file javascript dengan html -->
+    <script src="js\script.js"></script>
 </head>
 
 
-<body>
+<body class="font">
     <!-- Judul/ Navbar -->
     <header class="main-header">
         <h1>Kalkulator BMI</h1>
@@ -18,51 +23,87 @@
     <!-- Isi Konten -->
     <main>
         <!-- Konten Sebelah Kiri -->
-        <section>
+        <section class="konten">
+
             <!-- Penjelasan BMI -->
-            <article>
-                <p>Kalkulator BMI adalah...</p>
-            </article>
+            <section class="konten">
+                <article>
+                    <p>BMI <i>(Body Mass Index)</i> atau Indeks Massa Tubuh sebagai acuan untuk mengetahui apakah
+                       seseorang memiliki kondisi yang ideal dengan melihatnya dari berat badan dan tinggi badannya.
+                       Cara menghitungnya adalah membagi berat badan (dalam kg) dengan tinggi badan (dalam cm yang
+                       sudah di konversi ke meter) yang sudah di kuadratkan. <b>Kalkulator BMI</b> ini dapat membantu
+                       melakukan perhitungan atau kalkulasi untuk mengetahui apakah berat badan yang dimiliki ideal
+                       dengan tinggi badan.</p>
+                    <p>Namun kalkulator BMI ini <u>hanya sebagai alat bantu</u>. Hal terpenting adalh tetap menjaga 
+                       pola makan yang sehat dan rutin melakukan olahraga :).</p>
+                </article>
+            </section>
 
             <!-- Form input -->
             <form>
                 <div class="form-group">
                     <label for="in-berat-badan">Berat Badan (kg):</label>
-                    <input type="number" id="in-berat-badan">
+                    <input type="number" id="in-berat-badan" name="in-berat-badan" placeholder="dalam kg">
                 </div>
 
                 <div class="form-group">
                     <label for="in-usia">Usia (Tahun):</label>
-                    <input type="number" id="in-usia">
+                    <input type="number" id="in-usia" name="in-usia">
                 </div>
 
                 <div class="form-group">
                     <label for="in-tinggi-badan">Tinggi Badan (cm):</label>
-                    <input type="number" id="in-usia">
+                    <input type="number" id="in-tinggi-badan" name="in-tinggi-badan" placeholder="dalam cm">
                 </div>
 
-                <div>
-                    <button class="bg-hitung" type="submit">Hitung BMI</button>
-                    <button class="bg-reset" type="submit">Reset</button>
+                <div class="button-position">
+                    <button class="bg-hitung" type="submit" onclick="kalkulasi()">Hitung BMI</button>
+                    <button class="bg-reset" type="submit" onclick="kalkulasi()">Reset</button>
                 </div>
             </form>
 
-            <!-- Fitur unggulan -->
+            <!-- Penjelasan interpretasi kategori BMI -->
             <header>
-                <h3 class="fit-unggulan">Fitur Unggulan</h3>
+                <h3 class="fit-unggulan">Interpretasi dari Kalkulasi BMI</h3>
             </header>
             <p class="unggulan">
-                Pada kalkulator BMI ini dilengkapi dengan...
+                Terdapat empat kategori yang membedakan status berat badan pada Indeks Massa Tubuh, yaitu:
             </p>
+
+            <!-- Tabel Interpretasi -->
+            <div>
+                <table>
+                    <tr>
+                        <th>BMI</th>
+                        <th>Status Berat Badan</th>
+                    </tr>
+                    <tr class="tr-ganjil">
+                        <td>Kurang Dari 18,5</td>
+                        <td>Kekurangan Berat Badan</td>
+                    </tr>
+                    <tr class="tr-genap">
+                        <td>18,5 - 24.9</td>
+                        <td>Normal (Ideal)</td>
+                    </tr>
+                    <tr class="tr-ganjil">
+                        <td>25,0 - 29,9</td>
+                        <td>Kelebihan Berat Badan</td>                    
+                    </tr>
+                    <tr class="tr-genap">                        
+                        <td>30.0 atau lebih</td>
+                        <td>Kegemukan (Obesitas)</td>
+                    </tr>
+                </table>
+            </div>
         </section>
 
         <!-- Konten Sebelah Kanan -->
-        <section>
+        <section class="konten">
             <section class="result-section">
-                 <!-- Hasil Perhitungan & Penjelasan -->
-            <header>
-                <h3>Hasil Perhitungan</h3>
-            </header>
+                <!-- Hasil Perhitungan & Penjelasan -->
+                <header>
+                    <h3>Hasil Perhitungan</h3>
+                </header>
             </section>
 
             <div class="result-section">
@@ -74,6 +115,26 @@
             </article>
         </section>
     </main>
+
+    <!-- Fuction Javascript -->
+
+    <!-- Kalkulasi hasil perhitungan berat badan/tinggi badan -->
+    <script>
+        function kalkulasi() {
+            let beratBadan = document.getElementById("in-berat-badan").value;
+            let usia = document.getElementById("in-usia").value;
+            let tinggiBadan = document.getElementById("in-tinggi-badan").value;
+
+            let hasil = beratBadan / ((tinggiBadan / 100) ^ 2);
+
+            document.write('Hasilnya adalah' + hasil)
+
+            // console.log('${beratBadan} ${usia} $(tinggiBadan)')
+
+            // alert("Sudah di klik")
+            // console.log("Ini sudah di klik");
+        }
+    </script>
 
     <!-- Footer -->
     <footer>
