@@ -41,10 +41,10 @@
                 <div class="form-group">
                     <label for="in-jenis-kelamin"><b>Jenis Kelamin:</b></label>
                     <label>
-                        <input type="radio" id="in-pria" name="pria" value="pria" required> Pria
+                        <input type="radio" id="input-jenis-kelamin" name="jenis-kelamin" value="pria" required> Pria
                     </label>
                     <label>
-                        <input type="radio" id="in-wanita" name="wanita" value="wanita" required> Wanita
+                        <input type="radio" id="input-jenis-kelamin" name="jenis-kelamin" value="wanita" required> Wanita
                     </label>
                 </div>
 
@@ -65,7 +65,7 @@
 
                 <div class="button-position">
                     <button class="bg-hitung" type="button" onclick="kalkulasi()">Hitung BMI</button>
-                    <button class="bg-reset" type="button" onclick="kalkulasi()">Reset</button>
+                    <button class="bg-reset" type="button" onclick="reset()">Reset</button>
                 </div>
             </form>
 
@@ -115,7 +115,7 @@
             </section>
 
             <div class="result-section">
-                <span id="hasil-bmi">0</spSan>
+                <span id="hasil-bmi" type="number">0</spSan>
             </div>
 
             <article id="keterangan-hasil-bmi">
